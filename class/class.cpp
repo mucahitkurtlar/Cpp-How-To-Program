@@ -2,23 +2,23 @@
 
 using namespace std;
 
-class Book{
+class Student{
 	public:
-		string title;
-		string author;
-		unsigned int pages;
-		Book(string title = "no title", string author = "no author", unsigned int pages = 0){
-			Book::title = title;
-			Book::author = author;
-			Book::pages = pages;
+		string name;
+		string id;
+		unsigned int age;
+		Student(string name, string id, unsigned int age){
+			Student::name = name;
+			Student::id = id;
+			Student::age = age;
+		}
+		void printStudent(){
+			cout << name << "\t" << id << "\t" << age << endl;
 		}
 };
 
 int main(){
-	Book book("Faust", "Goethe", 330);
-//	book.title = "Faust";
-//	book.author = "Goethe";
-//	book.pages = 320;
-	cout << book.title << endl << book.author << endl << book.pages << endl;
+	Student student("Burhan", "18280868", 19);
+	student.printStudent();
 	return 0;
 }
