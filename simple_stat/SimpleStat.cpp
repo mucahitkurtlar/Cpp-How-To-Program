@@ -27,6 +27,6 @@ bool SimpleStat::addNumber(int num){
 
 float SimpleStat::getAverage(){
 	if(counter > 0)
-		return (float)sum / counter;
+		return static_cast<float>(sum) / counter;
 	return 0;
 }
