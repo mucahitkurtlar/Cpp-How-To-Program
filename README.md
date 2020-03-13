@@ -2,6 +2,6 @@
 
 C++ öğrenme sürecim boyunca yazdığım kod örnekleri
 
-## ToD
+## ToDo
 * Complete find_missing
 * Complete object_as_function_argument
