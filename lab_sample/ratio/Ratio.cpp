@@ -33,14 +33,21 @@
    reduce();
  }
 
- void Ratio::div(Ratio &obj){
+ /*void Ratio::div(Ratio &obj){
    int newNum = num * obj.den;
    int newDen = den * obj.num;
    num = newNum;
    den = newDen;
    reduce();
  }
-
+*/
+ Ratio Ratio::div(Ratio &obj0, Ratio &obj1){
+   int newNum = obj0.num * obj1.den;
+   int newDen = obj0.den * obj1.num;
+   Ratio result(newNum, newDen);
+   result.reduce();
+   return result;
+ }
  void Ratio::print(){
    cout << num << "/" << den << endl;
  }

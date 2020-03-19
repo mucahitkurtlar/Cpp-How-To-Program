@@ -10,7 +10,7 @@ public:
   void mul(Ratio &);
   void div(Ratio &);
   void print();
-
+  static Ratio div(Ratio &, Ratio &);
 private:
   int num, den;
   int gcd(int, int);
