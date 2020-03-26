@@ -15,6 +15,14 @@
    reduce();
  }
 
+ int Ratio::getNum(){
+   return num;
+ }
+
+ int Ratio::getDen(){
+   return den;
+ }
+
  void Ratio::add(Ratio &obj){
    int extendedNum = num * obj.den;
    int extendenDen = den * obj.den;

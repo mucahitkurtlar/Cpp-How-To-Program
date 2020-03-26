@@ -3,9 +3,12 @@
 using namespace std;
 
 class Ratio {
+  friend Ratio operator*(const Ratio &, const Ratio &);
 public:
   Ratio(Ratio &);
   Ratio(int, int);
+  int getNum();
+  int getDen();
   void add(Ratio &);
   void mul(Ratio &);
   void div(Ratio &);
