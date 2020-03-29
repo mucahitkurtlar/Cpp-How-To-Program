@@ -21,6 +21,14 @@ Ratio operator-(Ratio &obj){
   return result;
 }
 
+bool operator<(Ratio &obj0, Ratio &obj1){
+  int extendedNum0 = obj0.getNum() * obj1.getDen();
+  int extendedNum1 = obj1.getNum() * obj0.getDen();
+  if(extendedNum0 < extendedNum1)
+    return true;
+  return false;
+}
+
 int main() {
   Ratio ratio0(6, 4);
   Ratio ratio1(17, 4);
@@ -38,6 +46,11 @@ int main() {
   result.print();
   result = -ratio0;
   result.print();
-
+  ratio0.print();
+  ratio1.print();
+  if(ratio0 < ratio1)
+    cout << "Araba nerde?\n";
+  else
+    cout << "Yarin verecekler\n";
   return 0;
 }
