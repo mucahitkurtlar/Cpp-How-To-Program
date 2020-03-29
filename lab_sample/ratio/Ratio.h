@@ -4,6 +4,10 @@ using namespace std;
 
 class Ratio {
   friend Ratio operator*(const Ratio &, const Ratio &);
+  friend Ratio operator-(const Ratio &, const Ratio &);
+  friend Ratio operator-(const Ratio &);
+  friend bool operator<(const Ratio &, const Ratio &);
+  
 public:
   Ratio(Ratio &);
   Ratio(int, int);
