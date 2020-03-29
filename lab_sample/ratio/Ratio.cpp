@@ -69,6 +69,8 @@
 
  void Ratio::reduce(){
    int gcdResult = gcd(num, den);
+   if(gcdResult < 0)
+    gcdResult = -gcdResult;
    num /= gcdResult;
    den /= gcdResult;
  }

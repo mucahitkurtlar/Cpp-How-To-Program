@@ -16,6 +16,11 @@ Ratio operator-(Ratio &obj0, Ratio &obj1){
   return result;
 }
 
+Ratio operator-(Ratio &obj){
+  Ratio result(-1 * obj.getNum(), obj.getDen());
+  return result;
+}
+
 int main() {
   Ratio ratio0(6, 4);
   Ratio ratio1(17, 4);
@@ -30,6 +35,8 @@ int main() {
   */
   //result = Ratio::div(ratio1, ratio0);
   result = ratio0 - ratio1;
+  result.print();
+  result = -ratio0;
   result.print();
 
   return 0;
